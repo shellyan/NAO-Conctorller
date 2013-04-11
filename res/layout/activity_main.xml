@@ -21,10 +21,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:text="10.33.6.89" >
-
-        <requestFocus />
-    </EditText>
+        android:singleLine="true"
+        android:text="10.33.6.89" />
 
     <TextView
         android:id="@+id/textView2"
@@ -38,7 +36,10 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:text="20000" />
+        android:text="20000" >
+
+        <requestFocus />
+    </EditText>
 
     <Button
         android:id="@+id/connect"
@@ -57,12 +58,13 @@
         android:id="@+id/command"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" />
+        android:ems="10"
+        android:singleLine="true" />
 
     <RelativeLayout
         android:id="@+id/Pad"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="match_parent" >
 
         <Button
             android:id="@+id/left"
@@ -72,26 +74,7 @@
             android:layout_alignBottom="@+id/back"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="40dp"
-            android:onClick="onClicked"
             android:text="←" />
-
-        <Button
-            android:id="@+id/forward"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/left"
-            android:onClick="onClicked"
-            android:text="↑" />
-
-        <Button
-            android:id="@+id/back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/forward"
-            android:layout_below="@+id/forward"
-            android:onClick="onClicked"
-            android:text=" ↓" />
 
         <Button
             android:id="@+id/right"
@@ -100,7 +83,6 @@
             android:layout_alignBaseline="@+id/back"
             android:layout_alignBottom="@+id/back"
             android:layout_toRightOf="@+id/back"
-            android:onClick="onClicked"
             android:text="→" />
 
         <Button
@@ -108,9 +90,40 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_below="@+id/left"
-            android:onClick="onClicked"
+            android:layout_alignParentTop="true"
             android:text="Submit" />
+
+        <Button
+            android:id="@+id/forward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/submit"
+            android:layout_centerHorizontal="true"
+            android:text="↑" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/forward"
+            android:layout_below="@+id/forward"
+            android:text=" ↓" />
+
+        <Button
+            android:id="@+id/rotate_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/left"
+            android:layout_alignLeft="@+id/left"
+            android:text=" " />
+
+        <Button
+            android:id="@+id/rotate_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/right"
+            android:layout_below="@+id/submit"
+            android:text=" " />
 
     </RelativeLayout>
 

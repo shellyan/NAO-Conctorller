@@ -69,7 +69,7 @@ public class RemoteTask extends AsyncTask<String, Void, Boolean> {
 			in = new BufferedInputStream(is);
 			PrintWriter out = new PrintWriter(new BufferedWriter(
 					new OutputStreamWriter(socket.getOutputStream())), true);
-			out.print("say:" + input);
+			out.print( input);
 			out.flush();
 			// textIn.setText(dataInputStream.readUTF());
 		} catch (UnknownHostException e) {
@@ -111,8 +111,7 @@ public class RemoteTask extends AsyncTask<String, Void, Boolean> {
 		
 		if (!connected)
 			alert("Failed to connect.");
-		else{if(input=="connected")
-			alert("Connected successfully!");}
+		
 
 	}
 
